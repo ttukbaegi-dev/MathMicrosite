@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <title>Math Microsite</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+    </head>
+    <body>
+        <script
+            type="text/javascript"
+            src="fillSidebar.js"
+            defer></script>
+        <script
+            type="text/javascript"
+            src="openComment.js"
+            defer></script>
+        <div id="sidebar">
+            <p>Navigation</p>
+            <div id="addCommentOpen"><p>Add a comment</p></div>
+        </div>
+
+        <div id="mainContent">
+            <h1 id="Counting">Counting</h1>
+            <p>
+                First we note that when you identify a thing, it is *one* thing.
+            </p>
+            <p>
+                And then we add a thing to one thing that we already have
+                and have *two* things. So we count things one by one through
+                addition of a thing to a group of things (or by adding
+                a unique thing to a set of things and taking that set's new
+                cardinality). <br>
+                You can make an error in counting if you count the same thing
+                again: this is called double-counting.
+            </p>
+            <p>
+                How do numbers look? They are only these ten digits
+                (numerals) combined. <br>
+            </p>
+<pre>
+{0 1 2 3 4 5 6 7 8 9}.
+</pre>
+            <p>
+                For example, 31; 27; 143; and 2,147,483,647. <br>
+                0 is special and is thanks to the Arabic people.
+                As a species, we have always been able to say there are none
+                of something, but we didn't invent the numeral 0 for a long 
+                time.
+            </p>
+
+
+
+            <h2>Thirteen distinct counting numbers ("primary colors")</h2>
+            <p>
+                We have these names that we use for the first ten counting
+                numbers: <br>
+            </p>
+<pre>
+{one, two, three, four, five, six, seven, eight, nine, ten}.
+</pre>
+            <p>
+                Verify that there are ten fingers on your two hands.
+                In English there are more than ten distinct numbers: <br>
+            </p>
+<pre>
+{eleven, twelve}.
+</pre>
+            <p>
+                There are twelve distinct numbers. <br>
+                In fact, there are thirteen distinct numbers
+                if you count zero (0). That is, if you add zero to the set
+                of unique counting numbers and take its cardinality. So now
+                we have thirteen primary "colors" with which we can "paint"
+                the counting numbers, along with a set of modifiers. We only
+                use forms of one through ten for writing numbers less than or
+                equal to 99, after which we introduce modifiers like hundred,
+                thousand, and m&#x2011;illion, which comes with its own modifiers
+                like b-, tr-, and quadr-.
+            </p>
+<pre>
+{zero,
+ one, two, three, four, five, six, seven, eight, nine, ten,
+ eleven, twelve}
+</pre>
+
+
+
+            <h2>Seven "-teens"</h2>
+            <p>
+                Then there are the seven -teens.
+            </p>
+<pre>
+[thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen].
+</pre>
+            <p>
+                These next seven numbers are of the form
+            </p>
+<pre>
+10 + [3..9].
+</pre>      
+            <p>
+                The new forms include "thir" for three, "fif" for five, and
+                "teen" for ten.
+            </p>
+
+
+
+            <h2>Eight sets of ten</h2>
+            <p>
+                Once we get to [twenty], the counting numbers begin following
+                a very predictable pattern: along with twenty, here are the
+                next ten numbers after nineteen.
+            </p>
+<pre>
+[twenty twenty-one twenty-two ... twenty-nine].
+</pre>
+            <p>
+                Notice how the twenties are just
+            </p>
+<pre>
+20 + [0..9].
+</pre>
+            <p>
+                Also notice that [twenty] is twen-ty or two tens. <br>
+                New forms include "twen" for two and "ty" for ten. <br>
+                The next seventy numbers follow the same pattern, with new
+                forms including "for" for four, which result in eight sets of
+                ten.
+            </p>
+<pre>
+[thirty  thirty-one  thirty-two  ... thirty-nine].
+[forty   forty-one   forty-two   ... forty-nine].
+[fifty   fifty-one   fifty-two   ... fifty-nine].
+[sixty   sixty-one   sixty-two   ... sixty-nine].
+[seventy seventy-one seventy-two ... seventy-nine].
+[eighty  eighty-one  eighty-two  ... eighty-nine].
+[ninety  ninety-one  ninety-two  ... ninety-nine].
+</pre>
+
+
+
+            <h2>Hundreds</h2>
+            <p>
+                Then the nine hundreds appear, with each hundred containing
+                a copy of each the thirteen distinct numbers, the seven -teens,
+                and the eight sets of ten.
+            </p>
+<pre>
+[one hundred .. one hundred ninety-nine].
+.
+.
+.
+[nine hundred .. nine hundred ninety-nine].
+</pre>
+
+
+
+            <h2>Thousands</h2>
+            <p>
+                Then thousands (also called grand - collective singular)
+            </p>
+<pre>
+[one thousand .. one thousand nine hundred ninety-nine].
+[two grand .. two grand nine hundred ninety-nine].
+.
+.
+.
+[nine grand .. nine grand nine hundred ninety-nine].
+</pre>
+            <p>
+                You can have ten grand, one hundred grand ... 
+                nine hundred ninety-nine grand, and for each its
+                hundreds, tens and ones.
+            </p>
+
+
+
+            <h2>-illions</h2>
+            <p>
+                Then millions, billions, trillions, quadrillions, quintillions,
+                sextillions, septillions, octillions, nonillions. <br>
+                You can have one million .. nine hundred ninety-nine million,
+                and then the billion is one grand *times* more in a
+                *multiplicative* sense.
+            </p>
+
+
+
+            <h1 id="Addition">Addition</h1>
+            <p>
+                While counting is done by adding one to a number, what if you
+                have two groups of digits representing two numbers that you
+                arrived at by counting? <br>
+                Could you add them?
+            </p>
+
+
+
+            <h1 id="Subtraction">Subtraction</h1>
+<pre>
+5 - 1 = 4.
+5 - 4 = 1.
+</pre>
+        </div>
+
+
+        <script type="text/javascript"
+            src="closeComment.js"
+            defer></script>
+        <div id="addCommentModal">
+            <div id="addCommentClose">
+                <p>CLOSE WINDOW</p>
+            </div>
+            <iframe id="addComment"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdXcOmDiFEmajoq-ggU5psRWvPc9mikYuVYYmCYnJX-HBxbQw/viewform?embedded=true"
+                width="640"
+                height="300"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">Loading…</iframe>
+        </div>
+    </body>
+</html>
