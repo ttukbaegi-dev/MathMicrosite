@@ -1,16 +1,17 @@
 <html>
     <head>
         <title>Math Microsite</title>
-        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="">
     </head>
     <body>
         <script
             type="text/javascript"
-            src="fillSidebar.js"
+            src="scripts/fillSidebar.js"
             defer></script>
         <script
             type="text/javascript"
-            src="openComment.js"
+            src="scripts/openComment.js"
             defer></script>
         <div id="sidebar">
             <p>Navigation</p>
@@ -122,8 +123,8 @@
                 Also notice that [twenty] is twen-ty or two tens. <br>
                 New forms include "twen" for two and "ty" for ten. <br>
                 The next seventy numbers follow the same pattern, with new
-                forms including "for" for four, which result in eight sets of
-                ten.
+                forms including "for" for four, and "eight" combining with "ty", 
+                which result in eight sets of ten.
             </p>
 <pre>
 [thirty  thirty-one  thirty-two  ... thirty-nine].
@@ -155,7 +156,12 @@
 
             <h2>Thousands</h2>
             <p>
-                Then thousands (also called grand - collective singular)
+                Then thousands (also each called grand, which is a collective
+                singular term) each contain nine hundreds. The thousands,
+                ten&#x2011;thousands, and hundred&#x2011;thousands are separated
+                from the hundreds, tens, and ones by a comma, so 1,000 = one
+                thousand and 999,009 = nine hundred and ninetey&#x2011;nine
+                thousand and nine.
             </p>
 <pre>
 [one thousand .. one thousand nine hundred ninety-nine].
@@ -164,6 +170,14 @@
 .
 .
 [nine grand .. nine grand nine hundred ninety-nine].
+.
+.
+.
+[ten thousand .. ten thousand nine hundred ninety-nine].
+.
+.
+.
+[nine hundred and ninety-nine thousand .. 999,999]
 </pre>
             <p>
                 You can have ten grand, one hundred grand ... 
@@ -203,7 +217,7 @@
 
 
         <script type="text/javascript"
-            src="closeComment.js"
+            src="scripts/closeComment.js"
             defer></script>
         <div id="addCommentModal">
             <div id="addCommentClose">
