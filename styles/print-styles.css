@@ -1,16 +1,15 @@
 div#sidebar {
-    height: 100%;
-    width: 180px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    border-right: double;
-    overflow-x: hidden;
-    padding-top: 10px;
+    width: 300px;
+    border: 1px solid #000000;
+    padding: 0 6px;
 }
 
-    div#sidebar > a, p {
-        padding: 6px 8px;
+    div#sidebar > #expand-nav {
+        display: none;
+    }
+
+    div#sidebar > a {
+        padding: 6px 0px;
         text-decoration: none;
         font-size: 14px;
         display: block;
@@ -20,24 +19,22 @@ div#sidebar {
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 28px;
         font-weight: bold;
+        margin: 0px;
     }
 
-    div#addCommentOpen {
-        background-color: #aaaaaa;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        padding: 0 3%;
-        margin: 0 2%;
+    div#sidebar > div#addCommentOpen {
+        display: none;
     }
 
 
 
+/*
 div#mainContent {
     margin-right: 30%;
     margin-left: 180px;
     padding: 0 10px;
 }
+*/
 
     div#mainContent > p {
         margin-top: 0px;
