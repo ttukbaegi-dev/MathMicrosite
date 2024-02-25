@@ -3,8 +3,13 @@
         <title>Math Microsite</title>
         <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="styles/print-styles.css" type="text/css" media="print"/>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
     <body>
+        
+
+
         <script
             type="text/javascript"
             src="scripts/fillSidebar.js"
@@ -15,17 +20,21 @@
             defer></script>
         <div id="sidebar">
             <button id="expand-nav" type="button">Expand navigation</button>
-            <p>Headings</p>
-            <div id="addCommentOpen"><p>Add a comment</p></div>
+            <button id="addCommentOpen" type="button">Add a comment</button>
+            <p id="nav-title">Arithmetic</p>
         </div>
 
+
+
         <div id="mainContent">
+<!-- Foundation of the natural numbers -->            
             <h1 id="Counting">Counting</h1>
             <p>
                 First we note that when you identify a thing, it is *one* thing.
+                Before this thing is counted there are no things.
             </p>
             <p>
-                And then we add a thing to one thing that we already have
+                And then we add a thing to the one thing that we already have
                 and have *two* things. So we count things one by one through
                 addition of a thing to a group of things (or by adding
                 a unique thing to a set of things and taking that set's new
@@ -35,12 +44,10 @@
             </p>
             <p>
                 How do numbers look? They are only these ten digits
-                (numerals) combined. <br>
-            </p>
-<pre>
-{0 1 2 3 4 5 6 7 8 9}.
-</pre>
-            <p>
+                (numerals) combined in "place value" order
+
+                $$ \{0~1~2~3~4~5~6~7~8~9\}. $$
+            
                 For example, 31; 27; 143; and 2,147,483,647. <br>
                 0 is special and is thanks to the Arabic people.
                 As a species, we have always been able to say there are none
@@ -50,141 +57,364 @@
 
 
 
+
+
+            <h2>Real world (basic) math: Place value calculation</h2>
+            <p>
+                Place value means that this number:
+
+                $$ 31415926535 $$
+
+                has 11 places, each with its own *weight*.
+            </p>
+
+            <h3>Simplest place value (_ times one)</h3>
+            <p>
+                Starting from the
+                right end of the number, the first digit has a place *weight*
+                of 1. So its place value is just the intrinsic bin value 5.
+
+                $$ 5 $$
+            </p>
+
+            <h3>
+                Laborious calculation of the second place value using
+                basic counting, introducing multiplication (times) by 10,
+                and also introducing "generalized counting", or addition.
+                (also division as an inverse (opposite) of multiplication.)
+            </h3>
+            <p>
+                To get the place value of the second digit (3), you would first
+                need to know how to add more than just individual 1's onto a
+                number (count up from a number), but just imagine this: the 3
+                *weighs* ten times \((10 * \_)\) heavier than the value in the
+                first place (5). So follow the reasoning below:
+            </p>
+
+
+
+
+
+            <h4>
+                First phase: Grouping
+            </h4>
+            <p>
+                $$\begin{aligned}
+                    30 = 10 * 3 &= (3 + 3) \\
+                                &+ (3 + 3) \\
+                                &+ (3 + 3) \\
+                                &+ (3 + 3) \\
+                                &+ (3 + 3)
+                \end{aligned}$$
+
+                That is, there are ten groups of 3 in the place value of the second digit,
+                which I write as five groups of (3 + 3), or 6. So it is also true that
+                
+                $$
+                    5 * 6 = 30
+                $$
+                
+                Now we split the first group of a pair of 3's (or 6) into ones. We note that with
+                addition, there is a property called associativity, which groups and ungroups
+                (associates and de-associates) numbers using parentheses: "(" the left paren and
+                ")" the right paren. This we use to ungroup the six ones that make up the first
+                group of 6, and re-group them into two groups of 5 and 1, respectively.
+                
+                $$\begin{aligned}
+                    30 = 5 * 6 &= ((1 + 1 + 1) + (1 + 1 + 1)) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3) \\
+                    30 = 5 * 6 &= ((1 + 1 + 1 + 1 + 1) + 1) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3) \\
+                               &+ (3 + 3)
+                \end{aligned}$$
+
+                Let's do the same thing to each of the four remaining groups of 6, thus editing
+                all five groups of 6 the same way, which leaves us with 5 * 6 written a different
+                way.
+
+                $$\begin{aligned}
+                    30 &= ((1 + 1 + 1 + 1 + 1) + 1) \\
+                       &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                       &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                       &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                       &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    30 &= 5 * ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    30 &= 5 * (5 + 1)
+                \end{aligned}$$
+                
+                Take the five stragglers and make them another group of five.
+
+                $$\begin{aligned}
+                    30 &= 5 * (5 + 1) \\
+                       &= 5 * (1 + 1 + 1 + 1 + 1) + 5 * 1 \\
+                       &= 5 * (1 + 1 + 1 + 1 + 1) + (1 + 1 + 1 + 1 + 1) \\
+                       &= 6 * (1 + 1 + 1 + 1 + 1) \\
+                       &= 6 * 5
+                \end{aligned}$$
+                
+                That is, five groups of six is the same as six groups of five.
+                This is called commutativity, with the first number leaving its
+                place and the other number replacing it, and the first number
+                then taking the place of the second number.
+                Now take each pair of groups of five and put them together.
+                There are three pairs of groups in 6 groups.
+                That is, six groups of five is the same as three groups of ten.
+
+                $$\begin{aligned}
+                    30 &= 6 * 5 \\
+                       &= (3 * 2) * 5 \\
+                       &= 3 * (2 * 5) \\
+                       &= 3 * 10
+                \end{aligned}$$
+
+            </p>
+
+
+
+
+            <h4>
+                Aside: a proof that multiplication works correctly.
+            </h4>
+            <p>
+                Here is proof that two groups of five equal ten: Count to ten
+                in two groups.
+                $$
+                    \text{ [1 2 3 4 5 6 7 8 9 10] }
+                $$
+
+                \(\text{[1 2 3 4 5]}\) is the first group, as you would see if you cut
+                the list evenly in half, and \(\text{[6 7 8 9 10]}\) is the second group
+                left over. These are two groups of five. Count them to make sure.
+            </p>
+
+
+
+
+
+            <h4>
+                Counting up to \(3 * 10) the hard way.
+            </h4>
+            <p>
+                Now that the groups of 3's have all been broken down and grouped into 
+                groups of 10's, we can apply counting on the three groups of ten.
+            </p>
+
+
+
+            
+            <p>
+                Step 1: Expand the tens into ones.
+
+                $$\begin{aligned}
+                    30 &= 10 * 3 = 3 * 10 \\
+                       &= (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                       &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                       &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+                \end{aligned}$$
+            </p>
+            <p>
+                Step 2: Prepare to count the first group of 10. Let's do this
+                from left to right, starting from zero so that we count ten times
+                to reach ten. So we are working in left associative fashion, which
+                looks like this.
+
+                $$\begin{aligned}
+                    30 &= ((((((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                       &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                       &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+                \end{aligned}$$
+            </p>
+            <p>
+                Step 3: Fold each \(\text{+ 1}\) into the left, counting up
+                the leftmost number each time. We'll do the same thing to the other
+                groups of ten by pure repetition, so I will divide the 3 groups of 10
+                by 3 to work on the first group of ten alone (\(30 / 3 = 10\)).
+
+                $$\begin{aligned}
+                30 / 3 &= (((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= ((((((((((1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= (((((((((2) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= ((((((((3) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= (((((((4) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= ((((((5) + 1) + 1) + 1) + 1) + 1) \\
+                    10 &= (((((6) + 1) + 1) + 1) + 1) \\
+                    10 &= ((((7) + 1) + 1) + 1) \\
+                    10 &= (((8) + 1) + 1) \\
+                    10 &= ((9) + 1) \\
+                    10 &= (10)
+                \end{aligned}$$
+
+                Because we know that 10 * 3 = 3 * 10 = 30, then we have counted up to 30
+                by simply counting once to 10 and adding two more groups of 10.
+
+                is its place value, and the above equation goes through finding the
+                count of 3 * 10 (three times ten, or basic multiplication).
+            </p>
+
+
+
+<!-- 0 through 12 (13 in number) -->
             <h2>Thirteen distinct counting numbers ("primary colors")</h2>
             <p>
                 We have these names that we use for the first ten counting
-                numbers: <br>
-            </p>
-<pre>
-{one, two, three, four, five, six, seven, eight, nine, ten}.
-</pre>
-            <p>
+                numbers:
+
+                $$ \text{\{one, two, three, four, five, six, seven, eight, nine, ten\}} $$
+
                 Verify that there are ten fingers on your two hands.
                 In English there are more than ten distinct numbers: <br>
-            </p>
-<pre>
-{eleven, twelve}.
-</pre>
-            <p>
+
+                $$ \text{\{eleven, twelve\}} $$
+
                 There are twelve distinct numbers. <br>
                 In fact, there are thirteen distinct numbers
                 if you count zero (0). That is, if you add zero to the set
                 of unique counting numbers and take its cardinality. So now
                 we have thirteen primary "colors" with which we can "paint"
-                the counting numbers, along with a set of modifiers. We only
-                use forms of one through ten for writing numbers less than or
+                the counting numbers, along with a set of modifiers. We use
+                only forms of one through ten for writing numbers less than or
                 equal to 99, after which we introduce modifiers like hundred,
-                thousand, and m&#x2011;illion, which comes with its own modifiers
-                like b-, tr-, and quadr-.
+                thousand, and m&#x2011;illion, the last of which comes with its
+                own modifiers like b-, tr-, and quadr-, for two&#x2011;,
+                three&#x2011;, or four&#x2011;thousand times more than one
+                million.
+
+                $$\begin{aligned}
+                    &\{
+                    \text{zero,} \\
+                    &\text{one, two, three, four, five, six, seven, eight, nine, ten,} \\
+                    &\text{eleven, twelve}
+                    \}
+                \end{aligned}$$
             </p>
-<pre>
-{zero,
- one, two, three, four, five, six, seven, eight, nine, ten,
- eleven, twelve}
-</pre>
 
 
 
+<!-- 13 through 19 (7 in number) -->
             <h2>Seven "-teens"</h2>
             <p>
-                Then there are the seven -teens.
-            </p>
-<pre>
-[thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen].
-</pre>
-            <p>
+                Then there are the seven -teens, which makes 20 numbers total.
+
+                $$\begin{aligned}
+                \text{[thirteen, fourteen, fifteen, sixteen, }
+                \text{seventeen, eighteen, nineteen].}
+                \end{aligned}$$
+
                 These next seven numbers are of the form
-            </p>
-<pre>
-10 + [3..9].
-</pre>      
-            <p>
-                The new forms include "thir" for three, "fif" for five, and
-                "teen" for ten.
+
+                $$ 10 + [3..9]. $$
+
+                The new forms of the numbers one through ten include
+                "thir" for three, "fif" for five, and "teen" for ten.
             </p>
 
 
 
-            <h2>Eight sets of ten</h2>
+<!-- 20 through 29 ... 90 through 99 (80 in number,
+     since 10 * (end - start + 1) = 10*8)
+-->
+            <h2>Eight groups of ten</h2>
             <p>
                 Once we get to [twenty], the counting numbers begin following
                 a very predictable pattern: along with twenty, here are the
                 next ten numbers after nineteen.
-            </p>
-<pre>
-[twenty twenty-one twenty-two ... twenty-nine].
-</pre>
-            <p>
+
+                $$\begin{aligned}
+                \text{[twenty twenty-one twenty-two ... twenty-nine].}
+                \end{aligned}$$
+
                 Notice how the twenties are just
-            </p>
-<pre>
-20 + [0..9].
-</pre>
-            <p>
+
+                $$ 20 + [0..9]. $$
+
                 Also notice that [twenty] is twen-ty or two tens. <br>
                 New forms include "twen" for two and "ty" for ten. <br>
                 The next seventy numbers follow the same pattern, with new
-                forms including "for" for four, and "eight" combining with "ty", 
-                which result in eight sets of ten.
+                forms including "for" for four, and "eight" combining letters
+                with "ty", which result in counting eight groups of ten.
+
+                $$\begin{aligned}
+                &\text{[thirty  thirty-one  thirty-two  ... thirty-nine].} \\
+                &\text{[forty   forty-one   forty-two   ... forty-nine].} \\
+                &\text{[fifty   fifty-one   fifty-two   ... fifty-nine].} \\
+                &\text{[sixty   sixty-one   sixty-two   ... sixty-nine].} \\
+                &\text{[seventy seventy-one seventy-two ... seventy-nine].} \\
+                &\text{[eighty  eighty-one  eighty-two  ... eighty-nine].} \\
+                &\text{[ninety  ninety-one  ninety-two  ... ninety-nine].}
+                \end{aligned}$$
             </p>
-<pre>
-[thirty  thirty-one  thirty-two  ... thirty-nine].
-[forty   forty-one   forty-two   ... forty-nine].
-[fifty   fifty-one   fifty-two   ... fifty-nine].
-[sixty   sixty-one   sixty-two   ... sixty-nine].
-[seventy seventy-one seventy-two ... seventy-nine].
-[eighty  eighty-one  eighty-two  ... eighty-nine].
-[ninety  ninety-one  ninety-two  ... ninety-nine].
-</pre>
 
 
 
-            <h2>Hundreds</h2>
+<!-- 100 through 199 ... 900 through 999 (900 in number,
+     since 100 * (the count from 1 to 9) = 100*9) -->
+            <h2>Nine (more) Hundreds</h2>
             <p>
                 Then the nine hundreds appear, with each hundred containing
                 a copy of each the thirteen distinct numbers, the seven -teens,
-                and the eight sets of ten.
+                and the eight groups of ten.
             </p>
-<pre>
-[one hundred .. one hundred ninety-nine].
-.
-.
-.
-[nine hundred .. nine hundred ninety-nine].
-</pre>
+
+            <div>
+                $$\begin{aligned}
+                &\text{[one hundred .. one hundred ninety-nine].} \\
+                &\text{[two hundred .. two hundred ninety-nine].} \\
+                &\text{.} \\
+                &\text{.} \\
+                &\text{[nine hundred .. nine hundred ninety-nine].}
+                \end{aligned}$$
+            </div>
 
 
 
-            <h2>Thousands</h2>
+<!-- 1,000 through 1,999 ... 999,000 through 999,999 (999,000 in number,
+     since 1,000 * (the count from 1 to 999) = 1,000*999) -->
+            <h2>Nine hundred and ninety nine (more) Thousands</h2>
             <p>
                 Then thousands (also each called grand, which is a collective
-                singular term) each contain nine hundreds. The thousands,
-                ten&#x2011;thousands, and hundred&#x2011;thousands are separated
-                from the hundreds, tens, and ones by a comma, so 1,000 = one
-                thousand and 999,009 = nine hundred and ninetey&#x2011;nine
-                thousand and nine.
+                singular term) each contain nine hundreds and the first set of 
+                $$ \begin{bmatrix}
+                    13 & 7 & 80
+                \end{bmatrix}\begin{bmatrix}
+                    \text{primary colors} \\
+                    \text{-teens} \\
+                    \text{groups of ten}
+                \end{bmatrix}
+                $$ which total the missing hundred to form the ten hundreds that
+                are a thousand. The thousand's place, ten&#x2011;thousand's place,
+                and hundred&#x2011;thousand's place are separated from the hundreds,
+                tens, and ones by a comma, so \( 1,000 = \text{one thousand} \) and
+                \( 999,009 = \text{ nine hundred and ninetey&#x2011;nine thousand and nine }\).
             </p>
-<pre>
-[one thousand .. one thousand nine hundred ninety-nine].
-[two grand .. two grand nine hundred ninety-nine].
-.
-.
-.
-[nine grand .. nine grand nine hundred ninety-nine].
-.
-.
-.
-[ten thousand .. ten thousand nine hundred ninety-nine].
-.
-.
-.
-[nine hundred and ninety-nine thousand .. 999,999]
-</pre>
+
+            <div>
+                $$\begin{aligned}
+                &\text{[one thousand .. one thousand nine hundred ninety-nine].} \\
+                &\text{[two grand .. two grand nine hundred ninety-nine].} \\
+                &\text{.} \\
+                &\text{[nine grand .. nine grand nine hundred ninety-nine].} \\
+                &\text{.} \\
+                &\text{.} \\
+                &\text{[one hundred thousand .. one hundred thousand nine hundred ninety-nine].} \\
+                &\text{.} \\
+                &\text{.} \\
+                &\text{.} \\
+                &\text{[nine hundred and ninety-nine thousand .. 999,999].}
+                \end{aligned}$$
+            </div>
+
             <p>
-                You can have ten grand, one hundred grand ... 
+                You can have two grand, one hundred grand ... 
                 nine hundred ninety-nine grand, and for each its
                 hundreds, tens and ones.
             </p>
+
+
 
 
 
@@ -193,19 +423,29 @@
                 Then millions, billions, trillions, quadrillions, quintillions,
                 sextillions, septillions, octillions, nonillions. <br>
                 You can have one million .. nine hundred ninety-nine million,
-                and then the billion is one grand *times* more in a
+                and then the billion is one grand *times* more than one million in a
                 *multiplicative* sense.
             </p>
 
 
-
+<!-- Basic Operation 1 -->
             <h1 id="Addition">Addition</h1>
             <p>
-                While counting is done by adding one to a number, what if you
-                have two groups of digits representing two numbers that you
+                While counting is done by adding one to a number starting
+                from the "seed" of zero, what if you have two numbers that you
                 arrived at by counting? <br>
-                Could you add them?
+                Could you put them together into one count?
             </p>
+            <p>
+                For example, take \( 0 + 1 + 1 + 1 + 1 + 1 \). This is just
+                counting from the seed 0 to the next number, and so on and so on
+                until there is no more counting to be done. That is, in equation
+                form:
+            </p>
+
+            <div>
+                $$ 
+            </div>
 
 
 
@@ -217,13 +457,14 @@
         </div>
 
 
+
         <script type="text/javascript"
             src="scripts/closeComment.js"
             defer></script>
         <div id="addCommentModal">
-            <div id="addCommentClose">
-                <p>CLOSE WINDOW</p>
-            </div>
+            <button type="button" id="addCommentClose">
+                CLOSE WINDOW
+            </button>
             <iframe id="addComment"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdXcOmDiFEmajoq-ggU5psRWvPc9mikYuVYYmCYnJX-HBxbQw/viewform?embedded=true"
                 width="640"

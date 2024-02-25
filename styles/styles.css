@@ -7,31 +7,46 @@ div#sidebar {
     border-right: double;
     overflow-x: hidden;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-    div#sidebar > a, p {
+    div#sidebar > a, #nav-title {
         padding: 6px 8px;
         text-decoration: none;
         font-size: 14px;
         display: block;
     }
 
-    div#sidebar > p {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* div#sidebar > #nav-title */
+    p#nav-title {
         font-size: 28px;
         font-weight: bold;
+        margin-bottom: 0;
     }
-
-    div#addCommentOpen {
-        background-color: #aaaaaa;
+    
+    /* div#sidebar > #addCommentOpen */
+    /* div#sidebar > #expand-nav */
+    div#sidebar > button {
         height: 40px;
+        width: 150px;
         display: flex;
         align-items: center;
         padding: 0 3%;
         margin: 0 2%;
     }
 
+    div#page-picker {
+        height: 70vmin;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    div#sidebar > #page-nav {
+        margin-top: auto;
+        height: 6vmin;
+    }
 
 div#mainContent {
     margin-right: 30%;
@@ -41,7 +56,7 @@ div#mainContent {
 
     div#mainContent > p {
         margin-top: 0px;
-        margin-bottom: 1em;
+        margin-bottom: 4em;
     }
 
     div#mainContent > h1 {
@@ -75,11 +90,12 @@ div#addCommentModal {
     display: none;
 }
 
-    /* div#addCommentModal > div */
-    div#addCommentClose {
-        background-color: #aaaaaa;
-        height: 3em;
+    /* div#addCommentModal > button */
+    button#addCommentClose {
+        height: 40px;
+        width: 150px;
         display: flex;
         align-items: center;
-        padding: 0 1.85%;
+        padding: 0 1%;
+        margin: 0 2%;
     }
