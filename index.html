@@ -27,8 +27,9 @@
 
 
         <div id="mainContent">
-<!-- Foundation of the natural numbers -->            
+<!-- 1. Foundation of the natural numbers -->            
             <h1 id="Counting">Counting</h1>
+<!-- A. Zero, One, Counting, and Discovery -->
             <h2>The existence of new things</h2>
             <p>
                 First we note that when you identify a new thing, you
@@ -49,35 +50,48 @@
                 again: this is called double-counting.
             </p>
             <p>
-                How do numbers look? They are only these ten digits
-                (numerals) combined in "place value" order
+                How do numbers look? They are only these ten numerals 
+                combined in "place value" order:
 
-                $$ \{0~1~2~3~4~5~6~7~8~9\}. $$
+                $$ \text{{0 1 2 3 4 5 6 7 8 9}} $$
             
-                For example, 31; 27; 143; and 2,147,483,647. <br>
-                0 is special and is thanks to the Arabic people.
+                For example, 31; 27; 143; and 2,147,483,647. 0 is special and
+                is thanks to the Arabic people, who also gave us the rest of
+                these numerals, though these rest of them are a bit less special.
                 As a species, we have always been able to say there are none
                 of something, but we didn't invent the numeral 0 for a long 
                 time.
             </p>
-
-
-
-
-
-            <h2>Real world (basic) math: Place value calculation</h2>
+<!-- B. What is place-value notation? -->
+            <h2>What is the place-value way to write a number?</h2>
             <p>
-                Place value means that this number:
+                Place-value notation means that eadh number has: <br>
+                1) places, and 2) values at each place. <br>
+                So that means that this number:
 
-                $$ 31415926535 $$
+                $$ 31,415,926,535 = \text{TRUNC}(10,000,000,000 * \pi) $$
 
-                has 11 places, each with its own *weight*.
+                has 11 places, which each weigh ten (10) times more than
+                the last one, starting from the right.
             </p>
+            <p>
+                The rightmost (first) place has a weight of one (1). <br>
+                (Notice how ten is written. With ten, there is a one (1)
+                in the second place value, which we know by definition to be
+                ten times heavier. So ten is one (1) ten.) <br>
+                The second place value has a weight of ten (10). <br>
+                The third place value has a weight of one hundred (100). <br>
+                The fourth place value has a weight of one thousand (1,000). <br>
+                The fifth place value has a weight of ten thousand (10,000).
 
-
-
-
-
+                $$\begin{aligned}
+                         1 &= 1 * 1 \\
+                        10 &= 10 * 1 \\
+                       100 &= 10 * 10 \\
+                     1,000 &= 10 * 100 \\
+                    10,000 &= 10 * 1,000
+                \end{aligned}$$
+            </p>
             <h3>Simplest place value (_ times one)</h3>
             <p>
                 Starting from the
@@ -86,7 +100,6 @@
 
                 $$ 5 $$
             </p>
-
             <h3>
                 Laborious calculation of the second place value using
                 basic counting, introducing multiplication (times) by 10,
@@ -100,11 +113,6 @@
                 *weighs* ten times \((10 * \_)\) heavier than the value in the
                 first place (5). So follow the reasoning below:
             </p>
-
-
-
-
-
             <h4>
                 First phase: Grouping
             </h4>
@@ -181,9 +189,7 @@
                        &= 3 * (2 * 5) \\
                        &= 3 * 10
                 \end{aligned}$$
-
             </p>
-
             <h4>
                 Aside: a proof that multiplication works correctly.
             </h4>
@@ -198,7 +204,6 @@
                 the list evenly in half, and \(\text{[6 7 8 9 10]}\) is the second group
                 left over. These are two groups of five. Count them to make sure.
             </p>
-
             <h4>
                 Counting up to \(3 * 10) the hard way.
             </h4>
