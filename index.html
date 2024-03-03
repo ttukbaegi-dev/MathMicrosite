@@ -65,21 +65,23 @@
 <!-- B. What is place-value notation? -->
             <h2>What is the place-value way to write a number?</h2>
             <p>
-                Place-value notation means that eadh number has: <br>
+                Place-value notation means that each number has: <br>
                 1) places, and 2) values at each place. <br>
                 So that means that this number:
 
                 $$ 31,415,926,535 = \text{TRUNC}(10,000,000,000 * \pi) $$
 
                 has 11 places, which each weigh ten (10) times more than
-                the last one, starting from the right.
+                the previous one, starting from the right end.
             </p>
             <p>
                 The rightmost (first) place has a weight of one (1). <br>
+                The second place value has a weight of ten (10). <br>
+                
                 (Notice how ten is written. With ten, there is a one (1)
                 in the second place value, which we know by definition to be
                 ten times heavier. So ten is one (1) ten.) <br>
-                The second place value has a weight of ten (10). <br>
+
                 The third place value has a weight of one hundred (100). <br>
                 The fourth place value has a weight of one thousand (1,000). <br>
                 The fifth place value has a weight of ten thousand (10,000).
@@ -91,8 +93,12 @@
                      1,000 &= 10 * 100 \\
                     10,000 &= 10 * 1,000
                 \end{aligned}$$
+
+                So each place can hold ten things, if we include one through nine
+                as well as zero things.
             </p>
-            <h3>Simplest place value (_ times one)</h3>
+<!-- (one) first place (one's place) -->
+            <h3>First place value (_ times one) or one's place</h3>
             <p>
                 Starting from the
                 right end of the number, the first digit has a place *weight*
@@ -100,19 +106,21 @@
 
                 $$ 5 $$
             </p>
+<!-- (two) second place (ten's place) -->
             <h3>
                 Laborious calculation of the second place value using
-                basic counting, introducing multiplication (times) by 10,
-                and also introducing "generalized counting", or addition.
+                basic counting, introduces multiplication (times) by 10,
+                and "generalized counting", or addition.
                 (also division as an inverse (opposite) of multiplication.)
             </h3>
             <p>
                 To get the place value of the second digit (3), you would first
                 need to know how to add more than just individual 1's onto a
                 number (count up from a number), but just imagine this: the 3
-                *weighs* ten times \((10 * \_)\) heavier than the value in the
+                *weighs* ten times \((10 * 3)\) heavier than the value in the
                 first place (5). So follow the reasoning below:
             </p>
+<!-- (a) Grouping (proof of the commutative property of addition) -->
             <h4>
                 First phase: Grouping
             </h4>
@@ -134,9 +142,9 @@
                 
                 Now we split the first group of a pair of 3's (or 6) into ones. We note that with
                 addition, there is a property called associativity, which groups and ungroups
-                (associates and de-associates) numbers using parentheses: "(" the left paren and
+                (associates and un-associates) numbers using parentheses: "(" the left paren and
                 ")" the right paren. This we use to ungroup the six ones that make up the first
-                group of 6, and re-group them into two groups of 5 and 1, respectively.
+                group of 6, and re-group these "free" ones into two groups of 5 and 1, respectively.
                 
                 $$\begin{aligned}
                     30 = 5 * 6 &= ((1 + 1 + 1) + (1 + 1 + 1)) \\
@@ -180,7 +188,7 @@
                 place and the other number replacing it, and the first number
                 then taking the place of the second number.
                 Now take each pair of groups of five and put them together.
-                There are three pairs of groups in 6 groups.
+                There are three pairs of groups of five in 6 groups.
                 That is, six groups of five is the same as three groups of ten.
 
                 $$\begin{aligned}
@@ -189,6 +197,15 @@
                        &= 3 * (2 * 5) \\
                        &= 3 * 10
                 \end{aligned}$$
+
+                So we now have that 30, our second place value, is equal to:
+
+                $$
+                    30 = 10 * 3 = 5 * 6 = 6 * 5 = 3 * 10
+                $$
+
+                We have regrouped the number into a form which reads out loud
+                as "three times ten", or equally "add ten to 0 three times".
             </p>
             <h4>
                 Aside: a proof that multiplication works correctly.
