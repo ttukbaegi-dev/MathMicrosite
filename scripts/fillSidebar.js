@@ -1,17 +1,16 @@
 let sidebar = document.getElementById("sidebar");
 
 let req = new XMLHttpRequest();
-req.open("GET", "../pages");
-req.responseType = "document";
+req.open("GET", "../files.txt");
+req.responseType = "";
 req.send();
 
 req.addEventListener('load', () => {
-    // sidebar.innerHTML += ;
     let res = req.response;
-    let tbrows = res.body.getElementsByTagName("tr");
-    for (let i = 2; i < tbrows.length; ++i) {
-        let url = "./pages/" + tbrows[i].cells[0].innerText;
-        let resName = tbrows[i].cells[0].innerText;
+    console.log(res = res.split(/\r?\n/));
+    for (let file of res) {
+        let url = "./pages/" + file;
+        let resName = file;
         let onclickText = "displayWebpage('" + url + "')";
         sidebar.innerHTML +=
             '<a onclick="' + onclickText + '">' +
