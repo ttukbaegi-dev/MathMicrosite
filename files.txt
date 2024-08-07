@@ -1,3 +1,0 @@
-001-counting.html
-002-number-words.html
-003-big-number-words.html
