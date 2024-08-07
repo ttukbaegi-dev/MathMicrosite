@@ -1,13 +1,14 @@
 let sidebar = document.getElementById("sidebar");
 
 let req = new XMLHttpRequest();
-req.open("GET", "../files.txt");
+req.open("GET", "./files.txt");
 req.responseType = "";
 req.send();
 
 req.addEventListener('load', () => {
     let res = req.response;
-    console.log(res = res.split(/\r?\n/));
+    console.log(res)
+    res = res.split(/\r?\n/);
     for (let file of res) {
         let url = "./pages/" + file;
         let resName = file;
