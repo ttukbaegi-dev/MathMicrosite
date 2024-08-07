@@ -7,7 +7,12 @@ req.send();
 
 req.addEventListener('load', () => {
     let res = req.response;
-    res = res.body.innerText.split(/\r?\n/);
+    res = res.body.innerText.trim().split(/\r?\n/);
+    for (let i = 0; i < res.length; ++i) {
+        res[i] = res[i].trim();
+    }
+    console.log(res);
+
     for (let file of res) {
         let url = "./pages/" + file;
         let resName = file;
