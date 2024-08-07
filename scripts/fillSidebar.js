@@ -1,7 +1,7 @@
 let sidebar = document.getElementById("sidebar");
 
 let req = new XMLHttpRequest();
-req.open("GET", "../files.html");
+req.open("GET", "./files.html");
 req.responseType = "document";
 req.send();
 
