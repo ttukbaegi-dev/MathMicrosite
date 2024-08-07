@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+<!-- 1. Foundation of the natural numbers -->            
+        <h1 id="Counting">Counting</h1>
+<!-- A. Zero, One, Counting, and Discovery -->
+        <h2>The existence of new things</h2>
+        <p>
+            First we note that when you identify a new thing, you
+            have counted *one* thing. <br>
+            Before this thing is counted there are no things, or
+            *zero* things.
+        </p>
+        <p>
+            And then we add a thing to the one thing that we already have
+            and have *two* things. This is called counting, or counting
+            upwards. We count things one by one by putting one thing into
+            a group of things which contain a known number of things. <br>
+            Note that we can only count into a group of things that
+            initially contains zero (0) things. Zero is where counting
+            starts, because it is all we know before we see a thing to
+            count.<br>
+            You can make an error in counting if you count the same thing
+            again: this is called double-counting.
+        </p>
+        <p>
+            How do numbers look? They are only these ten numerals 
+            combined in "place value" order:
+
+            $$ \text{{0 1 2 3 4 5 6 7 8 9}} $$
+        
+            For example, 31; 27; 143; and 2,147,483,647. 0 is special and
+            is thanks to the Arabic people, who also gave us the rest of
+            these numerals, though these rest of them are a bit less special.
+            As a species, we have always been able to say there are none
+            of something, but we didn't invent the numeral 0 for a long 
+            time.
+        </p>
+
+
+
+<!-- B. What is place-value notation? -->
+        <h2>What is the place-value way to write a number?</h2>
+        <p>
+            Place-value notation means that each number has: <br>
+            1) places, and 2) values at each place. <br>
+            So that means that this number:
+
+            $$ 31,415,926,535 = \text{TRUNC}(10,000,000,000 * \pi) $$
+
+            has 11 places, which each weigh ten (10) times more than
+            the previous one, starting from the right end.
+        </p>
+        <p>
+            The rightmost (first) place has a weight of one (1). <br>
+            The second place value has a weight of ten (10). <br>
+            
+            (Notice how ten is written. With ten, there is a one (1)
+            in the second place value, which we know by definition to be
+            ten times heavier. So ten is one (1) ten.) <br>
+
+            The third place value has a weight of one hundred (100). <br>
+            The fourth place value has a weight of one thousand (1,000). <br>
+            The fifth place value has a weight of ten thousand (10,000).
+
+            $$\begin{aligned}
+                        1 &= 1 * 1 \\
+                    10 &= 10 * 1 \\
+                    100 &= 10 * 10 \\
+                    1,000 &= 10 * 100 \\
+                10,000 &= 10 * 1,000
+            \end{aligned}$$
+
+            So each place can hold ten things, if we include one through nine
+            as well as zero things.
+        </p>
+
+
+
+<!-- (one) first place (one's place) -->
+        <h3>First place value (_ times one) or one's place</h3>
+        <p>
+            Starting from the
+            right end of the number, the first digit has a place *weight*
+            of 1. So its place value is just the intrinsic bin value 5.
+
+            $$ 5 $$
+        </p>
+
+
+
+<!-- (two) second place (ten's place) -->
+        <h3>
+            Laborious calculation of the second place value using
+            basic counting, introduces multiplication (times) by 10,
+            and "generalized counting", or addition.
+            (also division as an inverse (opposite) of multiplication.)
+        </h3>
+        <p>
+            To get the place value of the second digit (3), you would first
+            need to know how to add more than just individual 1's onto a
+            number (count up from a number), but just imagine this: the 3
+            *weighs* ten times \((10 * 3)\) heavier than the value in the
+            first place (5). So follow the reasoning below:
+        </p>
+
+
+
+<!-- (a) Grouping (proof of the commutative property of addition) -->
+        <h4>
+            First phase: Grouping
+        </h4>
+        <p>
+            $$\begin{aligned}
+                30 = 10 * 3 &= (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3)
+            \end{aligned}$$
+
+            That is, there are ten groups of 3 in the place value of the second digit,
+            which I write as five groups of (3 + 3), or 6. So it is also true that
+            
+            $$
+                5 * 6 = 30
+            $$
+            
+            Now we split the first group of a pair of 3's (or 6) into ones. We note that with
+            addition, there is a property called associativity, which groups and ungroups
+            (associates and un-associates) numbers using parentheses: "(" the left paren and
+            ")" the right paren. This we use to ungroup the six ones that make up the first
+            group of 6, and re-group these "free" ones into two groups of 5 and 1, respectively.
+            
+            $$\begin{aligned}
+                30 = 5 * 6 &= ((1 + 1 + 1) + (1 + 1 + 1)) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                30 = 5 * 6 &= ((1 + 1 + 1 + 1 + 1) + 1) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3) \\
+                            &+ (3 + 3)
+            \end{aligned}$$
+
+            Let's do the same thing to each of the four remaining groups of 6, thus editing
+            all five groups of 6 the same way, which leaves us with 5 * 6 written a different
+            way.
+
+            $$\begin{aligned}
+                30 &= ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                    &+ ((1 + 1 + 1 + 1 + 1) + 1) \\
+                30 &= 5 * ((1 + 1 + 1 + 1 + 1) + 1) \\
+                30 &= 5 * (5 + 1)
+            \end{aligned}$$
+            
+            Take the five stragglers and make them another group of five.
+
+            $$\begin{aligned}
+                30 &= 5 * (5 + 1) \\
+                    &= 5 * (1 + 1 + 1 + 1 + 1) + 5 * 1 \\
+                    &= 5 * (1 + 1 + 1 + 1 + 1) + (1 + 1 + 1 + 1 + 1) \\
+                    &= 6 * (1 + 1 + 1 + 1 + 1) \\
+                    &= 6 * 5
+            \end{aligned}$$
+            
+            That is, five groups of six is the same as six groups of five.
+            This is called commutativity, with the first number leaving its
+            place and the other number replacing it, and the first number
+            then taking the place of the second number.
+            Now take each pair of groups of five and put them together.
+            There are three pairs of groups of five in 6 groups.
+            That is, six groups of five is the same as three groups of ten.
+
+            $$\begin{aligned}
+                30 &= 6 * 5 \\
+                    &= (3 * 2) * 5 \\
+                    &= 3 * (2 * 5) \\
+                    &= 3 * 10
+            \end{aligned}$$
+
+            So we now have that 30, our second place value, is equal to:
+
+            $$
+                30 = 10 * 3 = 5 * 6 = 6 * 5 = 3 * 10
+            $$
+
+            We have regrouped the number into a form which reads out loud
+            as "three times ten", or equally "add ten to 0 three times".
+        </p>
+
+
+
+        <h4>
+            Aside: a proof that multiplication works correctly.
+        </h4>
+        <p>
+            Here is proof that two groups of five equal ten: Count to ten
+            in two groups.
+            $$
+                \text{ [1 2 3 4 5 6 7 8 9 10] }
+            $$
+
+            \(\text{[1 2 3 4 5]}\) is the first group, as you would see if you cut
+            the list evenly in half, and \(\text{[6 7 8 9 10]}\) is the second group
+            left over. These are two groups of five. Count them to make sure.
+        </p>
+
+
+
+        <h4>
+            Counting up to \(3 * 10\) the hard way.
+        </h4>
+        <p>
+            Now that the groups of 3's have all been broken down and grouped into 
+            groups of 10's, we can apply counting on the three groups of ten.
+        </p>
+        <p>
+            Step 1: Expand the tens into ones.
+
+            $$\begin{aligned}
+                30 &= 10 * 3 = 3 * 10 \\
+                    &= (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                    &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                    &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+            \end{aligned}$$
+        </p>
+        <p>
+            Step 2: Prepare to count the first group of 10. Let's do this
+            from left to right, starting from zero so that we count ten times
+            to reach ten. So we are working in left associative fashion, which
+            looks like this.
+
+            $$\begin{aligned}
+                30 &= ((((((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                    &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1) \\
+                    &+ (1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
+            \end{aligned}$$
+        </p>
+        <p>
+            Step 3: Fold each \(\text{+ 1}\) into the left, counting up
+            the leftmost number each time. We'll do the same thing to the other
+            groups of ten by pure repetition, so I will divide the 3 groups of 10
+            by 3 to work on the first group of ten alone (\(30 / 3 = 10\)).
+
+            $$\begin{aligned}
+            30 / 3 &= (((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= ((((((((((1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= (((((((((2) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= ((((((((3) + 1) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= (((((((4) + 1) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= ((((((5) + 1) + 1) + 1) + 1) + 1) \\
+                10 &= (((((6) + 1) + 1) + 1) + 1) \\
+                10 &= ((((7) + 1) + 1) + 1) \\
+                10 &= (((8) + 1) + 1) \\
+                10 &= ((9) + 1) \\
+                10 &= (10)
+            \end{aligned}$$
+
+            Because we know that 10 * 3 = 3 * 10 = 30, then we have counted up to 30
+            by simply counting once to 10 and adding two more groups of 10.
+        </p>
+
+
+
+        <h4>
+            Conclusion of second place value calculations
+        </h4>
+        <p>
+            The total weight is 30. The tens place value is 3, and since we multiply
+            by the weight of the place value (in this case: 10's), we get 30 = 3 * 10.
+        </p>
+    </body>
+</html>

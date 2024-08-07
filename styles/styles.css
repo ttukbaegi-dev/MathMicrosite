@@ -13,7 +13,6 @@ div#sidebar {
 
     div#sidebar > a, #nav-title {
         padding: 6px 8px;
-        text-decoration: none;
         font-size: 14px;
         display: block;
     }
