@@ -18,7 +18,7 @@ req.addEventListener('load', () => {
         let resName = file;
         let onclickText = "displayWebpage('" + url + "')";
         sidebar.innerHTML +=
-            '<a href="#" onclick="' + onclickText + '">' +
+            '<a href="#"   onclick="' + onclickText + '">' +
             resName +
             "</a>";
     }
