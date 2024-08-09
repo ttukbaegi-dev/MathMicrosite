@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <h1>Addition</h1>
+        <p>
+            We know that \(0 + 1 = 1\) and that \(1 + 1 = 2\). <br>
+            What about \((1 + 1) + (1 + 1)\)?
+        </p>
+        <p>
+            This is just counting. When you add numbers, you can group
+            them any way you like. (This is called "associativity", since
+            you are associating the addition operation to two operands at
+            a time. Or, you could say that associativity gives you a *choice*
+            as to which two operands to add first.)
+        </p>
+        <p>
+            So for our problem of \((1 + 1) + (1 + 1)\), I can think of two ways
+            to go about solving it.
+            <ol>
+                <li>
+                The first involves grouping the 1's in a different way. Let's say
+                we choose to ungroup the 1's and re-group them from left to right.
+                It would look like \(((((0 + 1) + 1) + 1) + 1)\). Then we can
+                count up the 1's just like counting.
+
+                $$\begin{aligned}
+                    ((((0 + 1) + 1) + 1) + 1) &= ((((\text{zero} + 1) + 1) + 1) + 1) \\
+                                              &= (((\text{one} + 1) + 1) + 1) \\
+                                              &= ((\text{two} + 1) + 1) \\
+                                              &= (\text{three} + 1) \\
+                                              &= \text{four}
+                \end{aligned}$$
+
+                See that this accounts for all of the 1's and results in
+                \((1 + 1) + (1 + 1) = 4\)
+                </li>
+                <li>
+                The second involves the result from the first, and keeps the grouping
+                of the 1's.
+
+                $$\begin{aligned}
+                            (1 + 1) + (1 + 1) &= \text{two} + \text{two} \\
+                    ((((0 + 1) + 1) + 1) + 1) &= \text{two} + \text{two} \\
+                                  \text{four} &= \text{two} + \text{two}
+                \end{aligned}$$
+
+                So now you know something about multiplication too, that two,
+                two times, equals four, or \(2 \times 2 = 4\).
+                </li>
+            </ol>
+        </p>
+    </body>
+</html>
