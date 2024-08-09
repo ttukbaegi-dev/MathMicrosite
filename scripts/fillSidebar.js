@@ -11,7 +11,6 @@ req.addEventListener('load', () => {
     for (let i = 0; i < res.length; ++i) {
         res[i] = res[i].trim();
     }
-    console.log(res);
 
     for (let file of res) {
         let url = "./pages/" + file;
